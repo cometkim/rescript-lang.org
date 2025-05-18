@@ -36,4 +36,5 @@ let default = {
   td: Td.make,
   pre: Pre.make,
   code: Code.make,
+  codeTab: CodeTab.make,
 }

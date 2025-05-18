@@ -54,7 +54,7 @@ Cleaning the artifacts should be instantaneous.
 
 We've stress-tested bsb on a big project of 10,000 files (2 directories, 5000 files each, first 5000 no dependencies, last 5000 10 dependencies on files from the former directory) using https://github.com/ocaml-omake/omake/blob/perf-test/performance/generate.ml, on Retina Macbook Pro Early 2015 (3.1 GHz Intel Core i7).
 
-<!-- TODO: better repro -->
+{/* TODO: better repro */}
 
 - No-op build of 10k files: `800ms` (the minimum amount of time required to check the mtimes of 10k files).
 - Clean build: \<3 minutes.
@@ -72,7 +72,7 @@ In short, thanks to our bsc compiler and bsb build system's architecture, we're 
 
 ReScript uses the concept of interface files (`.resi`) (or, equivalently, [module signatures](module.md#signatures)). Exposing only what you need naturally speeds up incremental builds. E.g. if you change a `.res` file whose corresponding `.resi` file doesn't expose the changed part, then you've reduced the amount of dependent files you have to rebuild.
 
-<!-- TODO: validate this -->
+{/* TODO: validate this */}
 
 ## Programmatic Usage
 

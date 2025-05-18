@@ -75,7 +75,7 @@ module A_b_c: {
   let c = (v: c) => Any(v);
 };
 ```
-<!-- Union types are useful for modeling situations when values can overlap in the types they can take on.  -->
+{/* Union types are useful for modeling situations when values can overlap in the types they can take on.  */}
 What happens when we need to know specifically whether we have a value of type `a`? This is a case by case issue; it depends on whether there are some intersections in the runtime encoding of `a`, `b` or `c`. For some primitive types, it is easy enough to use `Js.typeof` to tell the difference between, e.g, `number` and `string`.
 
 Like [type guards in typescript](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types), we have to trust the user knowledge to differentiate between union types. However, such user level knowledge is isolated in a single module so that we can reason about its correctness locally.

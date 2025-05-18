@@ -24,7 +24,7 @@ Unlike most compiled-to-js languages, in ReScript, **you don't need to write dat
 - Module. ReScript files are considered top-level modules, and are compiled to JS files 1 to 1. Nested modules are compiled to JavaScript objects.
 - Unit. The `unit` type, which has a single value `()`, compiles to `undefined` too. Likewise, you can treat an incoming JS `undefined` as `()`.
 
-<!-- TODO: talk about poly variant -->
+{/* TODO: talk about poly variant */}
 
 **Types that are slightly different than JS, but that you can still use from JS**:
 - Int. **Ints are 32-bits**! Be careful, you can potentially treat them as JS numbers and vice-versa, but if the number's large, then you better treat JS numbers as floats. For example, we bind to Js.Date using `float`s.
