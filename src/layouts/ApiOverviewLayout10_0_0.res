@@ -18,11 +18,11 @@ let categories: array<Sidebar.Category.t> = [
 /* Used for API docs (structured data) */
 module Docs = {
   @react.component
-  let make = (~components=ApiMarkdown.default, ~children) => {
+  let make = (~children) => {
     let title = "API"
     let version = "v10.0.0"
 
-    <ApiLayout title categories version components> children </ApiLayout>
+    <ApiLayout title categories version> children </ApiLayout>
   }
 }
 

@@ -103,7 +103,7 @@ let categories = [
 
 module Docs = {
   @react.component
-  let make = (~components=ApiMarkdown.default, ~children) => {
+  let make = (~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
 
@@ -142,11 +142,11 @@ module Docs = {
     let title = "Belt Stdlib"
     let version = "v10.0.0"
 
-    <ApiLayout components title version activeToc categories breadcrumbs> children </ApiLayout>
+    <ApiLayout title version activeToc categories breadcrumbs> children </ApiLayout>
   }
 }
 
 module Prose = {
   @react.component
-  let make = (~children) => <Docs components=ApiMarkdown.default> children </Docs>
+  let make = (~children) => <Docs> children </Docs>
 }

@@ -57,7 +57,6 @@ let make = (
   ~nextVersion: option<(string, string)>=?,
   ~activeToc: option<SidebarLayout.Toc.t>=?,
   ~categories: array<Category.t>,
-  ~components=MarkdownComponents.default,
   ~theme=#Reason,
   ~children,
 ) => {
@@ -152,7 +151,6 @@ let make = (
   <SidebarLayout
     metaTitle
     theme
-    components
     sidebarState=(isSidebarOpen, setSidebarOpen)
     sidebar
     categories
@@ -180,7 +178,6 @@ module Make = (Content: StaticContent) => {
     ~availableVersions: option<array<(string, string)>>=?,
     ~nextVersion: option<(string, string)>=?,
     /* ~activeToc: option<SidebarLayout.Toc.t>=?, */
-    ~components: option<MarkdownComponents.t>=?,
     ~theme: option<ColorTheme.t>=?,
     ~children: React.element,
   ) => {
@@ -243,7 +240,6 @@ module Make = (Content: StaticContent) => {
       ?nextVersion,
       ?activeToc,
       categories,
-      ?components,
       ?theme,
       children,
     })

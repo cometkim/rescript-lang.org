@@ -10,7 +10,7 @@ type serializeOptions = {
   mdxOptions: mdxOptions,
 }
 
-@module("next-mdx-remote/serialize")
+@module("next-mdx-remote-client/serialize")
 external serialize: (string, serializeOptions) => promise<output> = "serialize"
 
 let defaultMdxOptions = {
@@ -22,7 +22,7 @@ let defaultMdxOptions = {
   ],
 }
 
-@react.component @module("next-mdx-remote")
+@react.component @module("next-mdx-remote-client")
 external make: (
   ~frontmatter: JSON.t,
   ~compiledSource: string,

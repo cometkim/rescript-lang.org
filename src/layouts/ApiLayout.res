@@ -70,7 +70,6 @@ let make = (
   ~title="",
   ~version: option<string>=?,
   ~activeToc: option<Toc.t>=?,
-  ~components=ApiMarkdown.default,
   ~children,
 ) => {
   let router = Next.Router.useRouter()
@@ -132,7 +131,6 @@ let make = (
     ?breadcrumbs
     metaTitle={pageTitle ++ " | ReScript API"}
     theme=#Reason
-    components
     sidebarState=(isSidebarOpen, setSidebarOpen)
     sidebar>
     children

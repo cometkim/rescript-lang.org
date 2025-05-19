@@ -213,7 +213,6 @@ module MobileDrawerButton = {
 let make = (
   ~metaTitle: string,
   ~theme: ColorTheme.t,
-  ~components: MarkdownComponents.t,
   ~editHref: option<string>=?,
   ~sidebarState: (bool, (bool => bool) => unit),
   // (Sidebar, toggleSidebar) ... for toggling sidebar in mobile view
@@ -328,9 +327,7 @@ let make = (
                     editLinkEl
                   </div>
                 </div>
-                <div className={hasBreadcrumbs ? "mt-10" : "mt-6 md:-mt-4"}>
-                  <MdxProvider components> children </MdxProvider>
-                </div>
+                <div className={hasBreadcrumbs ? "mt-10" : "mt-6 md:-mt-4"}> children </div>
                 pagination
               </main>
               {switch rightSidebar {

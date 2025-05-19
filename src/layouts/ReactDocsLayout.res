@@ -21,7 +21,7 @@ module V0110Layout = DocsLayout.Make({
 
 module Latest = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
     let url = route->Url.parse
@@ -41,7 +41,6 @@ module Latest = {
 
     <LatestLayout
       theme=#Reason
-      components
       metaTitleCategory="React"
       availableVersions=Constants.allReactVersions
       version
@@ -55,7 +54,7 @@ module Latest = {
 
 module V0110 = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
     let url = route->Url.parse
@@ -74,7 +73,6 @@ module V0110 = {
 
     <V0110Layout
       theme=#Reason
-      components
       metaTitleCategory="React"
       availableVersions=Constants.allReactVersions
       version
@@ -88,7 +86,7 @@ module V0110 = {
 
 module V0100 = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
     let url = route->Url.parse
@@ -107,7 +105,6 @@ module V0100 = {
 
     <V0100Layout
       theme=#Reason
-      components
       metaTitleCategory="React"
       availableVersions=Constants.allReactVersions
       version

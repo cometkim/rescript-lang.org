@@ -1,6 +1,2 @@
 @react.component
-let make: (
-  ~frontmatter: JSON.t=?,
-  ~components: MarkdownComponents.t=?,
-  ~children: React.element,
-) => React.element
+let make: (~frontmatter: JSON.t=?, ~children: React.element) => React.element

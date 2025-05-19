@@ -496,26 +496,24 @@ let default = (props: props) => {
         <div className="flex overflow-hidden">
           <div
             className="flex justify-between min-w-320 px-4 pt-16 lg:align-center w-full lg:px-8 pb-48">
-            <MdxProvider components=MarkdownComponents.default>
-              <main className="max-w-1280 w-full flex justify-center">
-                <div style={ReactDOM.Style.make(~maxWidth="44.0625rem", ())} className="w-full">
-                  <H1> {React.string("Libraries & Bindings")} </H1>
-                  <SearchBox
-                    placeholder="Enter a search term, name, keyword, etc"
-                    onValueChange
-                    onClear
-                    value={searchValue}
-                  />
-                  <div className="mt-12 space-y-8">
-                    officialCategory
-                    communityCategory
-                  </div>
+            <main className="max-w-1280 w-full flex justify-center">
+              <div style={ReactDOM.Style.make(~maxWidth="44.0625rem", ())} className="w-full">
+                <H1> {React.string("Libraries & Bindings")} </H1>
+                <SearchBox
+                  placeholder="Enter a search term, name, keyword, etc"
+                  onValueChange
+                  onClear
+                  value={searchValue}
+                />
+                <div className="mt-12 space-y-8">
+                  officialCategory
+                  communityCategory
                 </div>
-              </main>
-              <div className="hidden lg:block h-full ">
-                <InfoSidebar filter setFilter />
               </div>
-            </MdxProvider>
+            </main>
+            <div className="hidden lg:block h-full ">
+              <InfoSidebar filter setFilter />
+            </div>
           </div>
         </div>
         <Footer />

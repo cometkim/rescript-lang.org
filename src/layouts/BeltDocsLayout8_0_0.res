@@ -130,7 +130,7 @@ let categories = [
 
 module Docs = {
   @react.component
-  let make = (~components=ApiMarkdown.default, ~children) => {
+  let make = (~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
 
@@ -171,7 +171,7 @@ module Docs = {
 
     let warnBanner = <ApiLayout.OldDocsWarning route version />
 
-    <ApiLayout components title version activeToc categories breadcrumbs>
+    <ApiLayout title version activeToc categories breadcrumbs>
       warnBanner
       children
     </ApiLayout>
@@ -180,5 +180,5 @@ module Docs = {
 
 module Prose = {
   @react.component
-  let make = (~children) => <Docs components=ApiMarkdown.default> children </Docs>
+  let make = (~children) => <Docs> children </Docs>
 }

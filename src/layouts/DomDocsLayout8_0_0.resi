@@ -1,6 +1,6 @@
 module Docs: {
   @react.component
-  let make: (~components: MarkdownComponents.t=?, ~children: React.element) => React.element
+  let make: (~children: React.element) => React.element
 }
 
 module Prose: {

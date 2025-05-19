@@ -370,7 +370,6 @@ let default = (props: props) => {
     breadcrumbs
     metaTitle={title ++ " | ReScript API"}
     theme=#Reason
-    components=ApiMarkdown.default
     sidebarState=(isSidebarOpen, setSidebarOpen)
     sidebar
     rightSidebar>

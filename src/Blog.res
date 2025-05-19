@@ -287,13 +287,11 @@ let default = (props: props): React.element => {
         <Navigation isOverlayOpen setOverlayOpen />
         <div className="flex justify-center overflow-hidden">
           <main className="min-w-320 lg:align-center w-full lg:px-0 max-w-1280 pb-48">
-            <MdxProvider components=MarkdownComponents.default>
-              <div className="flex justify-center">
-                <div className="w-full" style={ReactDOMStyle.make(~maxWidth="66.625rem", ())}>
-                  content
-                </div>
+            <div className="flex justify-center">
+              <div className="w-full" style={ReactDOMStyle.make(~maxWidth="66.625rem", ())}>
+                content
               </div>
-            </MdxProvider>
+            </div>
           </main>
         </div>
         <Footer />

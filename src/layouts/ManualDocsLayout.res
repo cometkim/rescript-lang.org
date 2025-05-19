@@ -25,7 +25,7 @@ module V1200Layout = DocsLayout.Make({
 
 module V1200 = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let title = "Language Manual"
     let router = Next.Router.useRouter()
     let url = router.route->Url.parse
@@ -57,7 +57,6 @@ module V1200 = {
 
     <V1200Layout
       theme=#Reason
-      components
       version
       title
       metaTitleCategory="ReScript Language Manual"
@@ -73,7 +72,7 @@ module V1200 = {
 
 module V1100 = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let title = "Language Manual"
     let router = Next.Router.useRouter()
     let version = router.route->Url.parse->Url.getVersionString
@@ -85,7 +84,6 @@ module V1100 = {
 
     <V1100Layout
       theme=#Reason
-      components
       version
       title
       metaTitleCategory="ReScript Language Manual"
@@ -100,7 +98,7 @@ module V1100 = {
 
 module V1000 = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
 
@@ -126,7 +124,6 @@ module V1000 = {
 
     <V1000Layout
       theme=#Reason
-      components
       version
       title
       metaTitleCategory="ReScript Language Manual"
@@ -141,11 +138,7 @@ module V1000 = {
 
 module V900 = {
   @react.component
-  let make = (
-    ~frontmatter: option<JSON.t>=?,
-    ~components=MarkdownComponents.default,
-    ~children,
-  ) => {
+  let make = (~frontmatter: option<JSON.t>=?, ~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
 
@@ -171,7 +164,6 @@ module V900 = {
 
     <V900Layout
       theme=#Reason
-      components
       version
       title
       metaTitleCategory="ReScript Language Manual"
@@ -186,7 +178,7 @@ module V900 = {
 
 module V800 = {
   @react.component
-  let make = (~frontmatter=?, ~components=MarkdownComponents.default, ~children) => {
+  let make = (~frontmatter=?, ~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
 
@@ -247,7 +239,6 @@ module V800 = {
 
     <V800Layout
       theme=#Reason
-      components
       version
       title
       metaTitleCategory="ReScript Language Manual"

@@ -18,7 +18,7 @@ let categories: array<Sidebar.Category.t> = [
 /* Used for API docs (structured data) */
 module Docs = {
   @react.component
-  let make = (~components=ApiMarkdown.default, ~children) => {
+  let make = (~children) => {
     let router = Next.Router.useRouter()
     let route = router.route
 
@@ -27,7 +27,7 @@ module Docs = {
 
     let warnBanner = <ApiLayout.OldDocsWarning route version />
 
-    <ApiLayout title categories version components>
+    <ApiLayout title categories version>
       warnBanner
       children
     </ApiLayout>

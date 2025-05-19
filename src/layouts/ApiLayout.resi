@@ -14,6 +14,5 @@ let make: (
   ~title: string=?,
   ~version: string=?,
   ~activeToc: SidebarLayout.Toc.t=?,
-  ~components: MarkdownComponents.t=?,
   ~children: React.element,
 ) => React.element

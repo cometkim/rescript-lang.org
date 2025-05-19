@@ -20,10 +20,10 @@ let makeCategories: string => array<Sidebar.Category.t> = version => [
 /* Used for API docs (structured data) */
 module Docs = {
   @react.component
-  let make = (~version, ~components=ApiMarkdown.default, ~children) => {
+  let make = (~version, ~children) => {
     let title = "API"
     let categories = makeCategories(version)
 
-    <ApiLayout title categories version components> children </ApiLayout>
+    <ApiLayout title categories version> children </ApiLayout>
   }
 }
